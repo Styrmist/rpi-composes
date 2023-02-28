@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+    jellyfin:
+        volumes:
+            - '/mnt/storage/dockers/jellyfin/config:/config'
+            - '/mnt/storage/dockers/jellyfin/cache:/cache'
+            - '/mnt/storage/media:/media'
+        network_mode: host
+        image: 'jellyfin/jellyfin:latest'
